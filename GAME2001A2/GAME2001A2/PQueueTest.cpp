@@ -67,10 +67,14 @@ public:
 		{
 			return true;
 		}
-		else if (m_id < m.GetID())
+		else if (m_priority > m.GetPriority())
+		{
+			return false;
+		}
+		/*else if (m_id < m.GetID())
 		{
 			return true;
-		}
+		}*/
 
 		return false;
 	}
@@ -98,6 +102,9 @@ int main()
 	que.push(NetworkMessage(1, 99));
 	que.push(NetworkMessage(2, 394));
 	que.push(NetworkMessage(4, 999));
+	que.push(NetworkMessage(22, 99));
+	que.push(NetworkMessage(8, 78));
+
 	
 
 
