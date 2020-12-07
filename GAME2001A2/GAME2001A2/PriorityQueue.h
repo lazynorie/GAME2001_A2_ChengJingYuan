@@ -26,7 +26,7 @@ public:
 			LinkIterator<T> it;
 			it = m_elements.Begin();
 
-			CMP cmp;	// Placeholder for the comparisons we will be making
+			CMP cmp, less_cmp, less_cmp_pointer, greater_cmp, greater_cmp_pointer;	// Placeholder for the comparisons we will be making
 
 			while (it.isValid())	// Move iterator to the correct spot (or null)
 			{

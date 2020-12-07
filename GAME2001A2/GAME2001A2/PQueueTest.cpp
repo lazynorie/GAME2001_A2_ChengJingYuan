@@ -85,15 +85,22 @@ private:
 
 int main()
 {
+	cout << "Lower number has higher priority!" << endl;
 	cout << "Priority queue data structure example!" << endl << endl;
 
-	const int SIZE = 4;
+	const int SIZE = 15;
 	PriorityQueue<NetworkMessage, less_cmp<NetworkMessage> > que(SIZE);
 
 	que.push(NetworkMessage(3, 100));
 	que.push(NetworkMessage(2, 286));
 	que.push(NetworkMessage(1, 362));
 	que.push(NetworkMessage(3, 435));
+	que.push(NetworkMessage(1, 99));
+	que.push(NetworkMessage(2, 394));
+	que.push(NetworkMessage(4, 999));
+	
+
+
 
 	// Display the priority queue
 	cout << "Priority queue content (Size - " << que.GetSize() << ") : " << endl;
